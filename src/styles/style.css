@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  --bg: #ffffff;
+  --bgHeader: rgb(217, 217, 217);
+  --textHeader: rgb(255, 255, 255);
+  --textHeaderBg: #b85c38;
+  --skipBgColor: #ffef5e;
+  --skipTxtColor: black;
+  --textColorHover: #ffffff;
+  --textColor: rgb(255, 255, 255);
+  --textItemColor: rgb(0, 0, 0);
+  --footColor: #c87941;
+  --btnColor: #000000;
+  --boxColor: #dad1d1;
+  --menuRight: rgba(255, 255, 255, 0.85);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip Content */
+.skip {
+  position: fixed;
+  top: 0;
+  padding: 1em;
+  background-color: var(--skipBgColor);
+  color: var(--skipTxtColor);
+  transform: translateY(-100px);
+  z-index: 99999;
+}
+
+.skip:focus {
+  transform: translateY(0px);
+}
+/* End of Skip Content */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: var(--bgHeader);
+  color: var(--textHeaderBg);
+}
