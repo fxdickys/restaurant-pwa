@@ -17,6 +17,8 @@ html {
   --btnColor: #000000;
   --boxColor: #dad1d1;
   --menuRight: rgba(255, 255, 255, 0.85);
+  --paddingTop: 6px;
+  --paddingLR: 10px;
 }
 
 body {
@@ -49,8 +51,8 @@ body {
   color: var(--textHeaderBg);
 
   display: grid;
-  grid-template-columns: auto 1fr 2fr;
-  justify-items: center;
+  grid-template-columns: auto 1fr auto;
+  justify-items: star;
   align-items: center;
   /* gap: 10px; */
 
@@ -65,6 +67,17 @@ body {
   min-height: 44px;
   width: 6rem;
   height: 4rem;
+  padding: 5px;
+}
+
+.app-bar .app-bar__brand {
+  padding: 5px;
+  text-align: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  font-family: "Philosopher";
+  font-size: 1.5rem;
 }
 
 .app-bar .app-bar__menu {
@@ -75,8 +88,12 @@ body {
   display: none;
 }
 
+.app-bar .app-bar__navigation {
+  align-self: center;
+}
 .app-bar .app-bar__navigation ul {
   list-style-type: none;
+  text-align: center;
 }
 
 .app-bar .app-bar__navigation ul li {
@@ -85,11 +102,9 @@ body {
 
 .app-bar .app-bar__navigation ul li a {
   text-decoration: none;
-
   color: var(--textColor);
-  /* padding: 8px; */
   /* margin-bottom: 5px; */
   width: 100%;
-  margin-right: 100px;
-  font-size: clamp(max(2rem, 44px), 5vw, 3rem);
+  font-size: 1.5rem;
+  padding: var(--paddingTop) var(--paddingLR * 1.5);
 }
