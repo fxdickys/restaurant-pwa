@@ -5,7 +5,7 @@
 
 html {
   --bg: #ffffff;
-  --bgHeader: rgb(217, 217, 217);
+  --bgHeader: rgb(0, 0, 0);
   --textHeader: rgb(255, 255, 255);
   --textHeaderBg: #b85c38;
   --skipBgColor: #ffef5e;
@@ -44,7 +44,52 @@ body {
 /* End of Skip Content */
 
 .app-bar {
-  padding: 8px 16px;
+  padding: 6px 10px;
   background-color: var(--bgHeader);
   color: var(--textHeaderBg);
+
+  display: grid;
+  grid-template-columns: auto 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  /* gap: 10px; */
+
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .logo-img img {
+  min-width: 44px;
+  min-height: 44px;
+  width: 6rem;
+  height: 4rem;
+}
+
+.app-bar .app-bar__menu {
+  min-width: 44px;
+  min-height: 44px;
+  width: 8rem;
+  height: 6rem;
+  display: none;
+}
+
+.app-bar .app-bar__navigation ul {
+  list-style-type: none;
+}
+
+.app-bar .app-bar__navigation ul li {
+  display: inline-block;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  text-decoration: none;
+
+  color: var(--textColor);
+  /* padding: 8px; */
+  /* margin-bottom: 5px; */
+  width: 100%;
+  margin-right: 100px;
+  font-size: clamp(max(2rem, 44px), 5vw, 3rem);
 }
