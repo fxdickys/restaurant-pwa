@@ -17,6 +17,7 @@ html {
   --btnColor: #000000;
   --boxColor: #dad1d1;
   --menuRight: rgba(255, 255, 255, 0.85);
+
   --paddingTop: 6px;
   --paddingLR: 10px;
 }
@@ -52,7 +53,7 @@ body {
 
   display: grid;
   grid-template-columns: auto 1fr auto;
-  justify-items: star;
+  justify-items: center;
   align-items: center;
   /* gap: 10px; */
 
@@ -65,8 +66,10 @@ body {
 .app-bar .logo-img img {
   min-width: 44px;
   min-height: 44px;
+
   width: 6rem;
   height: 4rem;
+  aspect-ratio: 4/3;
   padding: 5px;
 }
 
@@ -77,34 +80,55 @@ body {
 
 .app-bar .app-bar__brand h1 {
   font-family: "Philosopher";
-  font-size: 1.5rem;
+  font-size: min(calc(2vmin+1rem), 2.5rem);
+  display: none;
 }
 
 .app-bar .app-bar__menu {
   min-width: 44px;
   min-height: 44px;
-  width: 8rem;
+  width: 2rem;
   height: 6rem;
-  display: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: auto;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  color: white;
+
+  border: none;
+  font-size: 22px;
+  padding: 8px;
+  cursor: pointer;
 }
 
 .app-bar .app-bar__navigation {
   align-self: center;
+  position: absolute;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  overflow: hidden;
 }
+
 .app-bar .app-bar__navigation ul {
   list-style-type: none;
   text-align: center;
 }
 
 .app-bar .app-bar__navigation ul li {
-  display: inline-block;
+  display: block;
+  left: 0;
 }
 
 .app-bar .app-bar__navigation ul li a {
   text-decoration: none;
   color: var(--textColor);
-  /* margin-bottom: 5px; */
   width: 100%;
   font-size: 1.5rem;
-  padding: var(--paddingTop) var(--paddingLR * 1.5);
+  padding: var(--paddingTop) max(10px, 1vw);
 }

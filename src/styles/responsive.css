@@ -1,2 +1,28 @@
 @media screen and (min-width: 650px) {
+  .app-bar .app-bar__brand h1 {
+    font-family: "Philosopher";
+    font-size: 2.5rem;
+  }
+
+  .app-bar .logo-img img {
+    width: 6rem;
+    height: 4rem;
+  }
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
 }
