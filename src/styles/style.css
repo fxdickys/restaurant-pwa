@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Philosopher", "Poppins", sans-serif;
   min-height: 100vh;
   background-color: var(--bg);
   display: flex;
@@ -67,8 +67,8 @@ body {
   min-width: 44px;
   min-height: 44px;
 
-  width: 6rem;
-  height: 4rem;
+  width: min(calc(6vmin + 2rem), 6rem);
+  /* height: 4rem; */
   aspect-ratio: 4/3;
   padding: 5px;
 }
@@ -80,8 +80,8 @@ body {
 
 .app-bar .app-bar__brand h1 {
   font-family: "Philosopher";
-  font-size: min(calc(2vmin+1rem), 2.5rem);
-  display: none;
+  font-size: max(calc(2vw + 1rem), 0.75rem);
+  display: flex;
 }
 
 .app-bar .app-bar__menu {
@@ -115,6 +115,10 @@ body {
   overflow: hidden;
 }
 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
 .app-bar .app-bar__navigation ul {
   list-style-type: none;
   text-align: center;
@@ -126,9 +130,28 @@ body {
 }
 
 .app-bar .app-bar__navigation ul li a {
+  display: inline-block;
   text-decoration: none;
   color: var(--textColor);
   width: 100%;
   font-size: 1.5rem;
   padding: var(--paddingTop) max(10px, 1vw);
+}
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: #db0000;
+  text-decoration: none;
 }
