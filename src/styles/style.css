@@ -24,8 +24,8 @@ html {
 
 body {
   font-family: "Philosopher", "Poppins", sans-serif;
-  min-height: 100vh;
   background-color: var(--bg);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -139,19 +139,32 @@ body {
 }
 
 /*
+  main
+*/
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+/*
   Footer
 */
 
 footer {
-  padding: 16px;
-}
-
-footer p {
+  padding: 5px 16px;
   text-align: center;
-  color: #aaaaaa;
+  justify-content: center;
+  background-color: var(--footColor);
 }
 
-footer p a {
+footer span {
+  color: var(--bg);
+  text-decoration: none;
+  font-size: min(calc(1.4vmin + 1rem), 1.5rem);
+}
+
+footer span a {
   color: #db0000;
   text-decoration: none;
 }
