@@ -51,6 +51,8 @@ body {
   background-color: var(--bgHeader);
   color: var(--textHeaderBg);
 
+  font-family: "Philosopher";
+
   display: grid;
   grid-template-columns: auto 1fr auto;
   justify-items: center;
@@ -79,7 +81,6 @@ body {
 }
 
 .app-bar .app-bar__brand h1 {
-  font-family: "Philosopher";
   font-size: max(calc(2vw + 1rem), 0.75rem);
   display: flex;
 }
@@ -111,6 +112,9 @@ body {
   position: absolute;
   left: -180px;
   width: 150px;
+
+  background-color: rgba(200, 121, 65, 0.85);
+
   transition: all 0.3s;
   overflow: hidden;
 }
@@ -136,6 +140,8 @@ body {
   width: 100%;
   font-size: 1.5rem;
   padding: var(--paddingTop) max(10px, 1vw);
+
+  text-align: left;
 }
 
 /*
