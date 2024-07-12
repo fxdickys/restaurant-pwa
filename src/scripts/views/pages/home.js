@@ -1,4 +1,4 @@
-const home = {
+const Home = {
   async render() {
     return `List of Restaurant`;
   },
@@ -8,4 +8,4 @@ const home = {
   },
 };
 
-export default home;
+export default Home;
