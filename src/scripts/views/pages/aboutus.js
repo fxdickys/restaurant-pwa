@@ -1,8 +1,8 @@
-const Detail = {
+const AboutUs = {
   async render() {
     return `
-        <h2>Detail page</h2>
-      `;
+          <h2>About Us page</h2>
+        `;
   },
 
   async afterRender() {
@@ -10,4 +10,4 @@ const Detail = {
   },
 };
 
-export default Detail;
+export default AboutUs;

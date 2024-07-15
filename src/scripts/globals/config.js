@@ -1,7 +1,7 @@
 const CONFIG = {
   KEY: "",
-  BASE_URL: "",
-  BASE_IMAGE_URL: "https://image.tmdb.org/t/p/w500/",
+  BASE_URL: "https://restaurant-api.dicoding.dev/",
+  BASE_IMAGE_URL: "",
   DEFAULT_LANGUAGE: "en-us",
 };
 
