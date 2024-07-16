@@ -4,7 +4,8 @@ class ListRestaurant {
   static async home() {
     const response = await fetch(API_ENDPOINT.HOME);
     const responseJSON = await response.json();
-    return responseJSON.results;
+
+    return responseJSON.restaurants;
   }
 }
 

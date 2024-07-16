@@ -153,6 +153,62 @@ main {
   flex: 1;
 }
 
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+/*
+  Restaurants
+*/
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/*
+  restaurant Item
+*/
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item_header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item_header .restaurant-item_header_poster {
+  width: 100%;
+}
+
+.restaurant-item .restaurant-item_header .restaurant-item_header_rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.restaurant-item
+  .restaurant-item_header
+  .restaurant-item_header_rating
+  .restaurant-item_header_rating_score {
+  margin-left: 10px;
+}
 /*
   Footer
 */

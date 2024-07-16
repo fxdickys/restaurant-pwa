@@ -1,15 +1,25 @@
 import ListRestaurant from "../../data/restaurant-source";
+import { createRestaurantItemTemplate } from "../templates/template-creator";
 
 const Home = {
   async render() {
-    return `<h2>List of Restaurant </h2>`;
+    return `
+      <div class="content">
+        <h2 class="content_heading">List of Restaurant </h2>
+        <div id="restaurants" class="restaurants">
+        </div>
+      </div>`;
   },
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
-    const restaurant = await ListRestaurant.home();
-    console.log("test");
-    console.log(restaurant);
+    const restaurants = await ListRestaurant.home();
+    const restaurantContainer = document.querySelector("#restaurants");
+
+    console.log(restaurants);
+    restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    });
   },
 };
 
