@@ -1,16 +1,18 @@
 const UrlParser = {
   parseActiveURLWithCombiner() {
     const url = window.location.hash.slice(1).toLowerCase();
-    const splitedUrl = this._urlSpliter(url);
+    const splitedUrl = this._urlSplitter(url);
     return this._urlCombiner(splitedUrl);
   },
 
   parseActiveUrlWithoutCombiner() {
     const url = window.location.hash.slice(1).toLowerCase();
+    console.log(url);
+
     return this._urlSplitter(url);
   },
 
-  _urlSpliter(url) {
+  _urlSplitter(url) {
     const urlsSplits = url.split("/");
 
     return {

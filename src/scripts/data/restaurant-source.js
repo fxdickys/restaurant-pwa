@@ -7,6 +7,11 @@ class ListRestaurant {
 
     return responseJSON.restaurants;
   }
+
+  static async detailRestaurant(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    return response.json();
+  }
 }
 
 export default ListRestaurant;

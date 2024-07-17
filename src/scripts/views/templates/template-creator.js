@@ -17,10 +17,15 @@ const createRestaurantItemTemplate = (restaurant) => `
         </div>
         <div class="restaurant-item_content">
             <h3><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
-            <i class="fa-solid fa-location-dot">test</i>
-            <h4>${restaurant.city}</h4>
+            <h4><span class="fa-solid fa-location-dot" style="color: #ff0000;"></span> ${
+              restaurant.city
+            }</h4>
         </div>
     </div>
 `;
 
-export { createRestaurantItemTemplate };
+const createRestaurantDetailTemplate = (restaurant) => `
+    <h2 class="retaurant_title">${restaurant.name}</h2>
+`;
+
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
