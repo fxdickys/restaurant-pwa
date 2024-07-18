@@ -25,7 +25,20 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 
 const createRestaurantDetailTemplate = (restaurant) => `
-    <h2 class="retaurant_title">${restaurant.name}</h2>
-`;
+    <div class="detail-restaurant">
+      <div class="detail-restaurant-header">
+            <img class="detail-restaurant-header_poster" alt="${
+              restaurant.name
+            }"
+                 src = "${
+                   restaurant.pictureId
+                     ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId
+                     : "https://picsum.photos/id/666/800/450?grayscale"
+                 }">
+            
+            <h3>${restaurant.name}</h3>
+      </div>
+    </div>
+  `;
 
 export { createRestaurantItemTemplate, createRestaurantDetailTemplate };

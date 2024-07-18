@@ -16,7 +16,6 @@ const Home = {
     const restaurants = await ListRestaurant.home();
     const restaurantContainer = document.querySelector("#restaurants");
 
-    console.log(restaurants);
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
