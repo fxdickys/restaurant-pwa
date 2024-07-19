@@ -20,8 +20,8 @@ const Detail = {
 
     const restaurant = await ListRestaurant.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector("#dtl_restaurant");
+    console.log(restaurant);
     const test = createRestaurantDetailTemplate(restaurant);
-    console.log(test);
 
     restaurantContainer.innerHTML = test;
   },

@@ -1,8 +1,43 @@
+.detail h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: min(calc(1.4vmin + 1rem), 1.5rem);
+}
 .dtl_restaurant .detail-restaurant .detail-restaurant-header {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  justify-items: center;
+
   gap: 10px;
+  font-size: min(calc(1.4vmin + 0.75rem), 1.3rem);
 }
 .dtl_restaurant .detail-restaurant .detail-restaurant-header img {
-  width: 80%;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dtl_restaurant .detail-restaurant .detail-restaurant-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+  justify-items: start;
+}
+
+.dtl_restaurant .detail-restaurant .detail-restaurant-container h2 {
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_alamat {
+  padding: 0 10px;
+  color: black;
+  font-weight: bold;
+  line-height: 1.5;
 }

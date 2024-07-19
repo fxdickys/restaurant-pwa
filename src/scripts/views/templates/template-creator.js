@@ -38,6 +38,20 @@ const createRestaurantDetailTemplate = (restaurant) => `
             
             <h3>${restaurant.name}</h3>
       </div>
+
+      <div class="detail-restaurant-container">
+          <h2>⭐️<span class="detail-restaurant-container_rating">${
+            restaurant.rating
+          }</h2>
+          
+          <div class="detail-restaurant-container_alamat">
+            <h3><span class="fa-solid fa-location-dot" style="color: #ff0000;"></span> ${
+              restaurant.city
+            }</h3>
+            <h4>${restaurant.address}</h4>
+          </div>
+            
+      </div>
     </div>
   `;
 
