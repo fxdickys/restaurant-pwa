@@ -1,0 +1,21 @@
+@media screen and (min-width: 800px) {
+  .dtl_restaurant .detail-restaurant .detail-restaurant-header h3 {
+    font-size: max(1.3rem, calc(2vmin + 1.5rem), 1.3rem);
+  }
+
+  .dtl_restaurant .detail-restaurant .detail-restaurant-container h2 {
+    padding: 10px;
+    font-size: 1.3rem;
+  }
+
+  .dtl_restaurant
+    .detail-restaurant
+    .detail-restaurant-container
+    .detail-restaurant-container_alamat {
+    padding: 0 10px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 1.3rem;
+  }
+}

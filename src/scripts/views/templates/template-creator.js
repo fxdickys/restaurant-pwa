@@ -50,6 +50,12 @@ const createRestaurantDetailTemplate = (restaurant) => `
             }</h3>
             <h4>${restaurant.address}</h4>
           </div>
+
+          <div class="detail-restaurant-container_description">
+            <h2>Deskripsi Restaurant</h2>
+
+            <h4>${restaurant.description}</h4>
+          </div>
             
       </div>
     </div>

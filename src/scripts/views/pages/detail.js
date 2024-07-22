@@ -6,7 +6,7 @@ const Detail = {
   async render() {
     return `
       <div class="detail">
-        <h2 class="detail_heading">Detail of Restaurant </h2>
+        <h2>Detail of Restaurant </h2>
         <div id="dtl_restaurant" class="dtl_restaurant">
         </div>
       </div>

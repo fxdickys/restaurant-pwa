@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Philosopher", "Poppins", sans-serif;
+  font-family: "Philosopher", "Poppins", "Roboto", sans-serif;
   background-color: var(--bg);
   min-height: 100vh;
   display: flex;
@@ -82,7 +82,8 @@ body {
 }
 
 .app-bar .app-bar__brand h1 {
-  font-size: max(calc(2vw + 1rem), 0.75rem);
+  font-size: min(calc(1.5vmin + 1rem), 2.5rem);
+  /* font-size: max(calc(2vw + 1rem), 0.75rem); */
   display: flex;
 }
 
@@ -150,7 +151,7 @@ body {
 */
 
 main {
-  padding: 32px;
+  padding: 10px;
   flex: 1;
 }
 
