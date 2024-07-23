@@ -31,6 +31,21 @@ body {
   flex-direction: column;
 }
 
+.garisBawah {
+  text-decoration: underline;
+}
+
+.roboto {
+  font-family: "Roboto";
+  font-weight: 400;
+
+  font-size: min(calc(1.4vmin + 0.75rem), 1rem);
+}
+
+.inline {
+  display: inline-block;
+}
+
 /* Skip Content */
 .skip {
   position: fixed;
@@ -73,7 +88,6 @@ body {
   width: min(calc(6vmin + 2rem), 6rem);
   /* height: 4rem; */
   aspect-ratio: 4/3;
-  padding: 5px;
 }
 
 .app-bar .app-bar__brand {
@@ -105,7 +119,7 @@ body {
 
   border: none;
   font-size: 22px;
-  padding: 8px;
+  padding: 6px;
   cursor: pointer;
 }
 
@@ -236,6 +250,6 @@ footer {
 
 footer span {
   color: var(--bg);
-  text-decoration: none;
-  font-size: min(calc(1.4vmin + 1rem), 1.5rem);
+  /* text-decoration: none; */
+  font-size: min(calc(1.4vmin + 0.75rem), 1.3rem);
 }

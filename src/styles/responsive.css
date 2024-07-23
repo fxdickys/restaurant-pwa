@@ -1,3 +1,8 @@
+@media screen and (min-width: 300px) {
+  .app-bar .app-bar__menu #hamburgerButton {
+    padding: 10px;
+  }
+}
 @media screen and (min-width: 800px) {
   .app-bar .app-bar__brand h1 {
     font-family: "Philosopher";
@@ -7,7 +12,9 @@
   .app-bar .logo-img img {
     width: 6rem;
     height: 4rem;
+    padding: 5px;
   }
+
   .app-bar .app-bar__menu {
     display: none;
   }

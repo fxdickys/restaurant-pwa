@@ -12,12 +12,13 @@ const createRestaurantItemTemplate = (restaurant) => `
             <div class="restaurant-item_header_rating">
                  <p>⭐️<span class="restaurant-item__header__rating__score">${
                    restaurant.rating
-                 }</span></p>
+                 }</span></p> 
             </div>
         </div>
+
         <div class="restaurant-item_content">
             <h3><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
-            <h4><span class="fa-solid fa-location-dot" style="color: #ff0000;"></span> ${
+            <h4 class="roboto"><span class="fa-solid fa-location-dot" style="color: #ff0000;"></span> ${
               restaurant.city
             }</h4>
         </div>
@@ -40,21 +41,44 @@ const createRestaurantDetailTemplate = (restaurant) => `
       </div>
 
       <div class="detail-restaurant-container">
-          <h2>⭐️<span class="detail-restaurant-container_rating">${
-            restaurant.rating
-          }</h2>
+          <h2><span>⭐️</span>${restaurant.rating}</h2>
           
           <div class="detail-restaurant-container_alamat">
-            <h3><span class="fa-solid fa-location-dot" style="color: #ff0000;"></span> ${
-              restaurant.city
-            }</h3>
-            <h4>${restaurant.address}</h4>
+            <span class="fa-solid fa-location-dot" style="color: #ff0000;"></span> 
+            <h2 class="inline">${restaurant.city}</h2>
+            <h4 class="roboto">${restaurant.address}</h4>
           </div>
 
           <div class="detail-restaurant-container_description">
             <h2>Deskripsi Restaurant</h2>
 
-            <h4>${restaurant.description}</h4>
+            <h4 class="roboto">${restaurant.description}</h4>
+          </div>
+
+          <div class="detail-restaurant-container_menu">
+            <h2>Menu yang tersedia</h2>
+
+            <div class="detail-restaurant-container__jenis">
+              <div class="detail-restaurant-container__jenis_makan">
+                <h3 class="garisBawah">Menu Makanan</h3>
+
+                <ul class="roboto">
+                  ${restaurant.menus.foods
+                    .map((food) => `<li>${food.name}</li>`)
+                    .join("")}
+                </ul>
+              </div>
+
+              <div class="detail-restaurant-container__jenis_minum">
+                <h3 class="garisBawah">Menu Minuman</h3>
+                <ul class="roboto">
+                  ${restaurant.menus.drinks
+                    .map((drink) => `<li>${drink.name}</li>`)
+                    .join("")}
+                </ul>
+
+              </div>
+            </div>
           </div>
             
       </div>

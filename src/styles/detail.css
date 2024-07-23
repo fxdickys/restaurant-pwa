@@ -1,8 +1,8 @@
 .detail h2 {
   text-align: center;
   padding: 10px;
-  /* font-size: min(calc(1.4vmin + 1rem), 1.5rem); */
-  font-size: min(calc(1.4vmin + 0.75rem), 1.5rem);
+  font-size: min(calc(1.4vmin + 1rem), 1.5rem);
+  /* font-size: min(calc(1.4vmin + 0.75rem), 1.5rem); */
 }
 
 .dtl_restaurant .detail-restaurant .detail-restaurant-header {
@@ -36,20 +36,15 @@
 }
 
 .dtl_restaurant .detail-restaurant .detail-restaurant-container h2 {
-  padding: 10px;
-}
-
-.dtl_restaurant .detail-restaurant .detail-restaurant-container h3 {
-  padding-left: 5px;
+  /* padding: 10px; */
 }
 
 .dtl_restaurant .detail-restaurant .detail-restaurant-container h4 {
   font-family: "Roboto";
   font-weight: 400;
-
-  font-size: min(calc(1.4vmin + 0.75rem), 1rem);
-  padding-left: 5px;
 }
+
+/*--------------------*/
 
 .dtl_restaurant
   .detail-restaurant
@@ -64,9 +59,16 @@
 .dtl_restaurant
   .detail-restaurant
   .detail-restaurant-container
+  .detail-restaurant-container_alamat
+  h2 {
+  padding-left: 0;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
   .detail-restaurant-container_description {
   padding-block-start: 10px;
-  padding-inline-start: 5px;
   color: black;
   font-weight: bold;
   line-height: 1.5;
@@ -85,5 +87,79 @@
   .detail-restaurant-container
   .detail-restaurant-container_description
   h4 {
-  padding-left: 10px;
+  padding: 0 10px;
+}
+
+/*------------------------------*/
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu {
+  padding-block-start: 10px;
+  padding-inline-start: 5px;
+  color: black;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: min(calc(1.4vmin + 0.75rem), 1.5rem);
+  display: block;
+  width: 100%;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu
+  .detail-restaurant-container__jenis {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  text-align: center;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu
+  .detail-restaurant-container__jenis
+  h3 {
+  font-size: min(calc(1.4vmin + 0.75rem), 1.3rem);
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu
+  .detail-restaurant-container__jenis
+  .detail-restaurant-container__jenis_makan {
+  padding: 10px;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu
+  .detail-restaurant-container__jenis
+  .detail-restaurant-container__jenis_makan
+  ul {
+  list-style: none;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu
+  .detail-restaurant-container__jenis
+  .detail-restaurant-container__jenis_minum {
+  padding: 10px;
+}
+
+.dtl_restaurant
+  .detail-restaurant
+  .detail-restaurant-container
+  .detail-restaurant-container_menu
+  .detail-restaurant-container__jenis
+  .detail-restaurant-container__jenis_minum
+  ul {
+  list-style: none;
 }
