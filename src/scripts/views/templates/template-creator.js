@@ -80,9 +80,36 @@ const createRestaurantDetailTemplate = (restaurant) => `
               </div>
             </div>
           </div>
-            
       </div>
     </div>
   `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
+const createReviewDetail = (review) => `
+    <div class="detail-review_cust card"> 
+      <div class="detail-review_cust_head">    
+        <h3 class="roboto00">${review.name} </h3>
+        <h4 class="roboto01">${review.date} </h4><br>
+      </div>
+
+      <div class="detail-review-cust-detail">
+        <h4 class="roboto">${review.review} </h4>
+      </div>
+    </div>
+ `;
+
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createReviewDetail,
+};
+
+// ${restaurant.customerReviews
+//   .map(
+//     (review) =>
+//       `<div class="detail-restaurant-container_review_dtl card">
+//     <h3 class="roboto">${review.name}</h3>
+//     <h4 class="roboto">${review.review}</h4>
+//   </div>
+//   `
+//   )
+//   .join("")}

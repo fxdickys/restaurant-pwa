@@ -39,11 +39,33 @@ body {
   font-family: "Roboto";
   font-weight: 400;
 
-  font-size: min(calc(1.4vmin + 0.75rem), 1rem);
+  font-size: min(calc(1.4vmin + 0.75rem), 1.2rem);
+}
+
+.roboto00 {
+  font-family: "Roboto";
+  font-weight: 600;
+
+  font-size: min(calc(1.4vmin + 0.75rem), 1.2rem);
+}
+
+.roboto01 {
+  font-family: "Roboto";
+  font-weight: 300;
+
+  font-size: min(calc(1.4vmin + 0.75rem), 0.9rem);
 }
 
 .inline {
   display: inline-block;
+}
+
+.card {
+  /* padding: 10px; */
+  box-shadow: 0 5px 10px 0 rgba(28, 29, 32, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
 }
 
 /* Skip Content */

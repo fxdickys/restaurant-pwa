@@ -1,13 +1,22 @@
 import UrlParser from "../../routes/url-parser";
 import ListRestaurant from "../../data/restaurant-source";
-import { createRestaurantDetailTemplate } from "../templates/template-creator";
+import {
+  createRestaurantDetailTemplate,
+  createReviewDetail,
+} from "../templates/template-creator";
 
 const Detail = {
   async render() {
     return `
       <div class="detail">
         <h2>Detail of Restaurant </h2>
-        <div id="dtl_restaurant" class="dtl_restaurant">
+        <div id="dtl_restaurant" class="dtl_restaurant"></div>
+
+        <div id="dtl_review" class="dtl_review">
+          <h2>Review</h2>
+          <div id="dtl_review_add" class="dtl_review_add"> </div>
+          <div id="dtl_review_cust" class"dtl_review_cust"> </div>
+
         </div>
       </div>
       `;
@@ -20,10 +29,14 @@ const Detail = {
 
     const restaurant = await ListRestaurant.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector("#dtl_restaurant");
-    console.log(restaurant);
     const test = createRestaurantDetailTemplate(restaurant);
-
+    console.log(restaurant);
     restaurantContainer.innerHTML = test;
+
+    const restaurantReview = document.querySelector("#dtl_review_cust");
+    restaurantReview.innerHTML = restaurant.customerReviews
+      .map((review) => createReviewDetail(review))
+      .join("");
   },
 };
 
