@@ -3,6 +3,8 @@ import ListRestaurant from "../../data/restaurant-source";
 import {
   createRestaurantDetailTemplate,
   createReviewDetail,
+  createRestaurantAdd,
+  dtl_review_add,
 } from "../templates/template-creator";
 
 const Detail = {
@@ -28,10 +30,16 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
 
     const restaurant = await ListRestaurant.detailRestaurant(url.id);
+
     const restaurantContainer = document.querySelector("#dtl_restaurant");
     const test = createRestaurantDetailTemplate(restaurant);
     console.log(restaurant);
     restaurantContainer.innerHTML = test;
+
+    const restaurantAdd = document.querySelector("#dtl_review_add");
+    const textAdd = createRestaurantAdd(restaurant);
+    console.log(textAdd);
+    restaurantAdd.innerHTML = textAdd;
 
     const restaurantReview = document.querySelector("#dtl_review_cust");
     restaurantReview.innerHTML = restaurant.customerReviews

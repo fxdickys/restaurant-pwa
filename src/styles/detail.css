@@ -197,4 +197,30 @@
   margin: 10px;
 }
 
+/* --------------------- */
+.detail .dtl_review .dtl_review_add {
+  margin: 10px;
+}
+
+.detail .dtl_review .dtl_review_add .form-review {
+  padding: 10px;
+}
+
+.detail .dtl_review .dtl_review_add .form-review label {
+  display: block;
+}
+
+.detail .dtl_review .dtl_review_add .form-review input {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  border: 0;
+  box-sizing: border-box;
+
+  background-color: #e9ede9;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 /* .detail .dtl_review .detail-review-cust .detail-review-cust-{ */

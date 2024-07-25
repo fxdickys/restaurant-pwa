@@ -84,6 +84,21 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
   `;
 
+const createRestaurantAdd = () => `
+    <div class="form-review card">
+      <form>
+        <label for="nama" class="roboto">Nama</label>
+        <input type="text" id="nama" name="nama" class="form_input" placeholder="Isikan Nama Anda">
+
+        <br><br>
+
+
+        <label for="review" class="roboto">Review</label>
+        <input type="text" id="review" name="review" class="form_input" placeholder="Isikan Nama Anda">
+      </form>                  
+    </div>
+`;
+
 const createReviewDetail = (review) => `
     <div class="detail-review_cust card"> 
       <div class="detail-review_cust_head">    
@@ -100,6 +115,7 @@ const createReviewDetail = (review) => `
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
+  createRestaurantAdd,
   createReviewDetail,
 };
 
