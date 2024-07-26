@@ -94,7 +94,8 @@ const createRestaurantAdd = () => `
 
 
         <label for="review" class="roboto">Review</label>
-        <input type="text" id="review" name="review" class="form_input" placeholder="Isikan Nama Anda">
+        <input type="text" id="review" name="review" class="form_input" placeholder="Berikan review anda">
+        <button class="form-submit">Submit</button>
       </form>                  
     </div>
 `;

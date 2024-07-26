@@ -33,18 +33,23 @@ const Detail = {
 
     const restaurantContainer = document.querySelector("#dtl_restaurant");
     const test = createRestaurantDetailTemplate(restaurant);
-    console.log(restaurant);
     restaurantContainer.innerHTML = test;
 
     const restaurantAdd = document.querySelector("#dtl_review_add");
     const textAdd = createRestaurantAdd(restaurant);
-    console.log(textAdd);
     restaurantAdd.innerHTML = textAdd;
 
     const restaurantReview = document.querySelector("#dtl_review_cust");
     restaurantReview.innerHTML = restaurant.customerReviews
       .map((review) => createReviewDetail(review))
       .join("");
+
+    const submitReview = document.querySelector(".form-submit");
+    submitReview.addEventListener("click", async () => {
+      const nama = document.querySelector("#nama");
+      console.log(restaurant.name);
+      console.log(nama.value);
+    });
   },
 };
 
