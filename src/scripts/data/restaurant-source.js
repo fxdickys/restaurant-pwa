@@ -8,10 +8,10 @@ class ListRestaurant {
     return responseJSON.restaurants;
   }
 
-  static async reviewRestaurant(id) {
-    const
-  }
-  
+  // static async reviewRestaurant(id) {
+  //   const
+  // }
+
   static async detailRestaurant(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     const responseJSON = await response.json();
